@@ -3,6 +3,19 @@
   "devCommand": "npm run dev",
   "installCommand": "npm install",
   "framework": "nextjs",
-  "regions": ["iad1"]
+  "regions": ["iad1"],
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.leibfriedclan.com"
+        }
+      ],
+      "destination": "https://leibfriedclan.com/:path*",
+      "permanent": true
+    }
+  ]
 }
 
