@@ -34,20 +34,20 @@ export default function RecipeModal({ isOpen, onClose }: RecipeModalProps) {
 
       {/* Modal */}
       <div
-        className="relative z-10 w-full max-w-4xl max-h-[90vh] bg-white rounded-lg shadow-2xl overflow-hidden"
+        className="relative z-10 w-full max-w-4xl max-h-[90vh] bg-white rounded-lg shadow-2xl overflow-hidden border-4 border-brand-red"
         onClick={(e) => e.stopPropagation()}
         style={{
           animation: 'slideUp 0.2s ease-out',
         }}
       >
         {/* Header */}
-        <div className="flex items-center justify-between p-4 border-b border-gray-200">
-          <h2 className="text-xl font-semibold text-gray-900">
+        <div className="flex items-center justify-between p-6 bg-brand-red border-b-4 border-brand-red-dark">
+          <h2 className="text-2xl font-bold text-white uppercase tracking-wider font-sans">
             Submit a Recipe
           </h2>
           <button
             onClick={onClose}
-            className="p-2 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-full transition-colors"
+            className="p-2 text-white hover:text-white/80 hover:bg-brand-red-dark rounded-full transition-colors"
             aria-label="Close modal"
           >
             <svg
