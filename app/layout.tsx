@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Dancing_Script, Inter } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/react'
 import './globals.css'
 
 const dancingScript = Dancing_Script({
@@ -27,6 +28,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${dancingScript.variable} ${inter.variable}`}>
         {children}
+        <Analytics />
       </body>
     </html>
   )
